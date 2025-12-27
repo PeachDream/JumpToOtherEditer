@@ -1,0 +1,445 @@
+2025-12-27 12:26:47,154 [      3]   INFO - #c.i.p.i.b.AppStarter - ------------------------------------------------------ IDE STARTED ------------------------------------------------------
+2025-12-27 12:26:47,176 [     25]   INFO - #c.i.p.i.b.AppStarter - JNA library (64-bit) loaded in 13 ms
+2025-12-27 12:26:47,178 [     27]   INFO - #c.i.p.i.b.AppStarter - IDE: IntelliJ IDEA (build #IC-243.21565.193, Wed, 13 Nov 2024 01:46:00 GMT)
+2025-12-27 12:26:47,178 [     27]   INFO - #c.i.p.i.b.AppStarter - OS: Windows (11.0)
+2025-12-27 12:26:47,179 [     28]   INFO - #c.i.p.i.b.AppStarter - JRE: 21.0.5+8-b631.16, amd64 (JetBrains s.r.o.)
+2025-12-27 12:26:47,179 [     28]   INFO - #c.i.p.i.b.AppStarter - JVM: 21.0.5+8-b631.16 (OpenJDK 64-Bit Server VM)
+2025-12-27 12:26:47,181 [     30]   INFO - #c.i.p.i.b.AppStarter - PID: 6952
+2025-12-27 12:26:47,182 [     31]   INFO - #c.i.i.p.PluginManager - Module intellij.sh.python is not enabled because dependency com.intellij.modules.python is not available
+Module intellij.ml.inline.completion.rider is not enabled because dependency com.intellij.modules.rider.cpp.core is not available
+Module intellij.ml.inline.completion.rider.csharp is not enabled because dependency intellij.ml.inline.completion.rider is not available
+Module intellij.ml.inline.completion.rider.cpp is not enabled because dependency intellij.ml.inline.completion.rider is not available
+Module intellij.ml.inline.completion.web is not enabled because dependency JavaScript is not available
+Module intellij.ml.inline.completion.html is not enabled because dependency intellij.ml.inline.completion.web is not available
+Module intellij.ml.inline.completion.terraform is not enabled because dependency org.intellij.plugins.hcl is not available
+Module intellij.ml.inline.completion.ruby is not enabled because dependency org.jetbrains.plugins.ruby is not available
+Module intellij.ml.inline.completion.python.jupyter is not enabled because dependency intellij.notebooks.core is not available
+Module intellij.ml.inline.completion.python is not enabled because dependency com.intellij.modules.python is not available
+Module intellij.ml.inline.completion.php is not enabled because dependency com.jetbrains.php is not available
+Module intellij.ml.inline.completion.js is not enabled because dependency intellij.ml.inline.completion.web is not available
+Module intellij.ml.inline.completion.js.vue is not enabled because dependency intellij.ml.inline.completion.js is not available
+Module intellij.ml.inline.completion.js.svelte is not enabled because dependency intellij.ml.inline.completion.js is not available
+Module intellij.ml.inline.completion.js.astro is not enabled because dependency intellij.ml.inline.completion.js is not available
+Module intellij.ml.inline.completion.go is not enabled because dependency org.jetbrains.plugins.go is not available
+Module intellij.ml.inline.completion.css is not enabled because dependency com.intellij.css is not available
+Module intellij.ml.inline.completion.css.sass is not enabled because dependency intellij.ml.inline.completion.css is not available
+Module intellij.ml.inline.completion.css.postcss is not enabled because dependency intellij.ml.inline.completion.css is not available
+Module intellij.ml.inline.completion.css.less is not enabled because dependency intellij.ml.inline.completion.css is not available
+Module intellij.ml.inline.completion.cpp is not enabled because dependency com.intellij.modules.clion is not available
+Module intellij.groovy/ant is not enabled because dependency AntSupport is not available
+Module intellij.llmInstaller.pycharm.community is not enabled because dependency intellij.pycharm.community.ide.impl.promotion is not available
+Module intellij.qodana.jvm.swagger is not enabled because dependency com.intellij.swagger is not available
+Module intellij.qodana.inspectionKts.js is not enabled because dependency JavaScript is not available
+Module intellij.qodana.python is not enabled because dependency intellij.python is not available
+Module intellij.qodana.php is not enabled because dependency com.jetbrains.php is not available
+Module intellij.qodana.js is not enabled because dependency JavaScript is not available
+Module intellij.qodana.go is not enabled because dependency intellij.go.coverage is not available
+Module intellij.execution.process.elevation.backend.split is not enabled because dependency intellij.execution.process.elevation is not available
+Module intellij.notebooks.backend.split is not enabled because dependency Pythonid is not available
+Module intellij.packageChecker.php is not enabled because dependency com.jetbrains.php is not available
+Module intellij.packageChecker.python is not enabled because dependency com.intellij.modules.python is not available
+Module intellij.packageChecker.javascript is not enabled because dependency JavaScript is not available
+Module intellij.packageChecker.go is not enabled because dependency org.jetbrains.plugins.go is not available
+Module intellij.packageChecker.amper is not enabled because dependency org.jetbrains.amper is not available
+2025-12-27 12:26:47,198 [     47]   INFO - #c.i.p.i.b.AppStarter - JVM options: [-Daether.connector.resumeDownloads=false, -Dcompose.swing.render.on.graphics=true, -Dide.native.launcher=false, -Dide.no.platform.update=false, -Didea.auto.reload.plugins=true, -Didea.classpath.index.enabled=false, -Didea.config.path=D:\work_self\JumpToAntigravity\JumpToAntigravity\build\idea-sandbox\IC-2024.3\config, -Didea.is.internal=true, -Didea.log.path=D:\work_self\JumpToAntigravity\JumpToAntigravity\build\idea-sandbox\IC-2024.3\log, -Didea.paths.selector=IdeaIC2024.3, -Didea.platform.prefix=Idea, -Didea.plugin.in.sandbox.mode=true, -Didea.plugins.path=D:\work_self\JumpToAntigravity\JumpToAntigravity\build\idea-sandbox\IC-2024.3\plugins, -Didea.required.plugins.id=com.peach.JumpToAntigravity, -Didea.system.path=D:\work_self\JumpToAntigravity\JumpToAntigravity\build\idea-sandbox\IC-2024.3\system, -Didea.vendor.name=JetBrains, -Dintellij.platform.runtime.repository.path=C:\Users\27509\.gradle\caches\9.0.0\transforms\d42469f8ee268be816e8b6b9ee138460\transformed\ideaIC-2024.3-win/modules/module-descriptors.jar, -Djava.nio.file.spi.DefaultFileSystemProvider=com.intellij.platform.core.nio.fs.MultiRoutingFileSystemProvider, -Djava.security.manager=com.intellij.platform.core.nio.fs.CoreBootstrapSecurityManager, -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader, -Djava.util.zip.use.nio.for.zip.file.access=true, -Djbr.catch.SIGABRT=true, -Djdk.attach.allowAttachSelf=true, -Djdk.http.auth.tunneling.disabledSchemes=, -Djdk.module.illegalAccess.silent=true, -Djdk.nio.maxCachedBufferSize=2097152, -Djna.boot.library.path=C:\Users\27509\.gradle\caches\9.0.0\transforms\d42469f8ee268be816e8b6b9ee138460\transformed\ideaIC-2024.3-win/lib/jna/amd64, -Djna.noclasspath=true, -Djna.nosys=true, -Dplugin.path=D:\work_self\JumpToAntigravity\JumpToAntigravity\build\idea-sandbox\IC-2024.3\plugins\JumpToAntigravity, -Dpty4j.preferred.native.folder=C:\Users\27509\.gradle\caches\9.0.0\transforms\d42469f8ee268be816e8b6b9ee138460\transformed\ideaIC-2024.3-win/lib/pty4j, -Dsplash=true, -Dsun.io.useCanonCaches=false, -Dsun.java2d.metal=true, -Dwsl.use.remote.agent.for.nio.filesystem=true, -XX:ReservedCodeCacheSize=512m, -XX:+HeapDumpOnOutOfMemoryError, -XX:-OmitStackTraceInFastThrow, -XX:CICompilerCount=2, -XX:+IgnoreUnrecognizedVMOptions, -XX:+UnlockDiagnosticVMOptions, -XX:TieredOldPercentage=100000, -javaagent:D:\work_self\JumpToAntigravity\JumpToAntigravity\build\coroutines-javaagent.jar, --add-opens=java.base/java.io=ALL-UNNAMED, --add-opens=java.base/java.lang=ALL-UNNAMED, --add-opens=java.base/java.lang.ref=ALL-UNNAMED, --add-opens=java.base/java.lang.reflect=ALL-UNNAMED, --add-opens=java.base/java.net=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.base/java.nio.charset=ALL-UNNAMED, --add-opens=java.base/java.text=ALL-UNNAMED, --add-opens=java.base/java.time=ALL-UNNAMED, --add-opens=java.base/java.util=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED, --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED, --add-opens=java.base/sun.net.dns=ALL-UNNAMED, --add-opens=java.base/sun.nio.ch=ALL-UNNAMED, --add-opens=java.base/sun.nio.fs=ALL-UNNAMED, --add-opens=java.base/sun.security.ssl=ALL-UNNAMED, --add-opens=java.base/sun.security.util=ALL-UNNAMED, --add-opens=java.desktop/com.sun.java.swing=ALL-UNNAMED, --add-opens=java.desktop/java.awt=ALL-UNNAMED, --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/java.awt.font=ALL-UNNAMED, --add-opens=java.desktop/java.awt.image=ALL-UNNAMED, --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.text=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED, --add-opens=java.desktop/sun.awt=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED, --add-opens=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.java2d=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.management/sun.management=ALL-UNNAMED, --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED, --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED, --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED, --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED, -Xms128m, -Xmx2048m, -Dfile.encoding=UTF-8, -Duser.country=CN, -Duser.language=zh, -Duser.variant, -ea]
+2025-12-27 12:26:47,199 [     48]   INFO - #c.i.p.i.b.AppStarter - args: 
+2025-12-27 12:26:47,199 [     48]   INFO - #c.i.p.i.b.AppStarter - library path: C:\Users\27509\.gradle\caches\9.0.0\transforms\d42469f8ee268be816e8b6b9ee138460\transformed\ideaIC-2024.3-win\jbr\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\BellSoft\LibericaJDK-21-Full\bin\;C:\Program Files\BellSoft\LibericaJDK-17-Full\bin\;C:\Python313\Scripts\;C:\Python313\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\node_modules\npm;C:\Users\27509\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\27509\AppData\Local\Programs\Python\Python311\;C:\Users\27509\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.1\bin;D:\PyCharm 2023.1.4\bin;;C:\Program Files\JetBrains\CLion 2023.3.4\bin;;C:\Users\27509\AppData\Roaming\npm;C:\Users\27509\AppData\Local\Programs\Microsoft VS Code\bin;D:\Antigravity\bin;.
+2025-12-27 12:26:47,199 [     48]   INFO - #c.i.p.i.b.AppStarter - boot library path: C:\Users\27509\.gradle\caches\9.0.0\transforms\d42469f8ee268be816e8b6b9ee138460\transformed\ideaIC-2024.3-win\jbr\bin
+2025-12-27 12:26:47,208 [     57]   INFO - #c.i.p.i.b.AppStarter - locale=zh_CN JNU=GBK file.encoding=UTF-8
+    idea.config.path=D:\work_self\JumpToAntigravity\JumpToAntigravity\build\idea-sandbox\IC-2024.3\config
+    idea.system.path=D:\work_self\JumpToAntigravity\JumpToAntigravity\build\idea-sandbox\IC-2024.3\system
+    idea.plugins.path=D:\work_self\JumpToAntigravity\JumpToAntigravity\build\idea-sandbox\IC-2024.3\plugins
+    idea.log.path=D:\work_self\JumpToAntigravity\JumpToAntigravity\build\idea-sandbox\IC-2024.3\log
+2025-12-27 12:26:47,212 [     61]   INFO - #c.i.p.i.b.AppStarter - CPU cores: 12; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@c2feeb0[Running, parallelism = 11, size = 0, active = 0, running = 0, steals = 0, tasks = 0, submissions = 0]; factory: java.util.concurrent.ForkJoinPool$DefaultForkJoinWorkerThreadFactory@52d395d9
+2025-12-27 12:26:47,213 [     62]   INFO - #c.i.i.p.PluginManager - Loaded bundled plugins: IDEA CORE (243.21565.193), TextMate Bundles (243.21565.193), Images (243.21565.193), Japanese Language Pack / 日本語言語パック (243.21565.193), JSON (243.21565.193), EditorConfig (243.21565.193), IDE Services / Provisioner API (243.21565.193), Machine Learning in Search Everywhere (243.21565.193), YAML (243.21565.193), JetBrains maven model api classes (243.21565.193), Maven server api classes (243.21565.193), Markdown (243.21565.193), Terminal (243.21565.193), Properties (243.21565.193), Gradle (243.21565.193), NetBeans Keymap (243.21565.193), Machine Learning in Marketplace (243.21565.193), JetBrains Marketplace Licensing (243.21565.193), com.intellij.dev (243.21565.193), Chinese (Simplified) Language Pack / 中文语言包 (243.21565.193), Remote Execution Agent (243.21565.193), Shell Script (243.21565.193), Station (243.21565.193), HTML Tools (243.21565.193), Visual Studio Keymap (243.21565.193), Copyright (243.21565.193), Machine Learning Code Completion (243.21565.193), Mercurial (243.21565.193), Java (243.21565.193), JavaFX (243.21565.193), Gradle DSL API (243.21565.193), Turbo Complete (243.21565.193), Kotlin (243.21565.193-IJ), ML Inline Completion - Core Pipeline (243.21565.193), JetBrains Repository Search (243.21565.193), LLM Installer (243.21565.193), IDE Features Trainer (243.21565.193), Toml (243.21565.193), WebP Support (243.21565.193), Performance Testing (243.21565.193), com.intellij.tracing.ide (243.21565.193), Java Bytecode Decompiler (243.21565.193), Java Stream Debugger (243.21565.193), Task Management (243.21565.193), JUnit (243.21565.193), Eclipse Interoperability (243.21565.193), IntelliLang (243.21565.193), Groovy (243.21565.193), Java Internationalization (243.21565.193), Korean Language Pack / 한국어 언어 팩 (243.21565.193), Bytecode Viewer (243.21565.193), TestNG (243.21565.193), Code Coverage for Java (243.21565.193), Java IDE Customization (243.21565.193), Grazie Lite (243.21565.193), Eclipse Keymap (243.21565.193), Perforce Helix Core (243.21565.193), GitHub (243.21565.193-community), Maven (243.21565.193), Gradle-Java (243.21565.193), Gradle-Java-Analysis (243.21565.193), Gradle-Maven (243.21565.193), GitLab (243.21565.193), Backup and Sync (243.21565.193), Git (243.21565.193), Qodana (243.21565.193), Configuration Script (243.21565.193), Shared Indexes (243.21565.193), Code With Me (243.21565.193), Subversion (243.21565.193), Package Checker (243.21565.193), Gradle Dependency Updater Implementation (243.21565.193), Async Profiler for IDE Performance Testing (243.21565.193)
+2025-12-27 12:26:47,213 [     62]   INFO - #c.i.i.p.PluginManager - Loaded custom plugins: Jump to Antigravity (1.0.0)
+2025-12-27 12:26:47,260 [    109]   INFO - #c.i.u.s.JBUIScale - System scale factor: 1.0 (JRE-managed HiDPI)
+2025-12-27 12:26:47,264 [    113]   INFO - #c.i.u.s.JBUIScale - Computed user scale factor: 1.0 (JRE-managed HiDPI)
+2025-12-27 12:26:47,296 [    145]   INFO - c.i.p.i.IdeFingerprint - Calculated dependencies fingerprint in 14 ms (hash=17mg5jsnye5br, buildTime=1731462360, appVersion=IC-243.21565.193)
+2025-12-27 12:26:47,429 [    278]   INFO - #c.i.u.i.PageCacheUtils - File page caching params:
+2025-12-27 12:26:47,429 [    278]   INFO - #c.i.u.i.PageCacheUtils - 	DEFAULT_PAGE_SIZE: 10485760
+2025-12-27 12:26:47,429 [    278]   INFO - #c.i.u.i.PageCacheUtils - 	Direct memory to use, max: 2126512128
+2025-12-27 12:26:47,429 [    278]   INFO - #c.i.u.i.PageCacheUtils - 	FilePageCache: regular + lock-free (LOCK_FREE_PAGE_CACHE_ENABLED:true)
+2025-12-27 12:26:47,429 [    278]   INFO - #c.i.u.i.PageCacheUtils - 	NEW_PAGE_CACHE_MEMORY_FRACTION: 0.20000000298023224
+2025-12-27 12:26:47,429 [    278]   INFO - #c.i.u.i.PageCacheUtils - 	Regular FilePageCache: 503316478 bytes
+2025-12-27 12:26:47,429 [    278]   INFO - #c.i.u.i.PageCacheUtils - 	New     FilePageCache: 125829122 bytes (+ up to 10.0% overflow)
+2025-12-27 12:26:47,429 [    278]   INFO - #c.i.u.i.PageCacheUtils - 	DirectByteBuffers pool: 104857600 bytes
+2025-12-27 12:26:47,440 [    289]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses names enumerator over mmapped file
+2025-12-27 12:26:47,441 [    290]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses streamlined attributes storage (over mmapped file)
+2025-12-27 12:26:47,441 [    290]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses content storage over memory-mapped file, with compression algo: LZ4[ > 8000b ]
+2025-12-27 12:26:47,451 [    300]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses OverMMappedFile(pageSize=67108864, acquireStorageOwnership=true) storage for main file records table
+2025-12-27 12:26:47,501 [    350]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS: impl (expected) version=846400, 387355 file records, 6912 content blobs
+2025-12-27 12:26:47,508 [    357]   INFO - #c.i.o.v.n.p.FSRecordsImpl - VFS initialized: 82 ms, 0 failed attempts, 0 error(s) were recovered
+2025-12-27 12:26:47,534 [    383]   INFO - #c.i.a.o.PathMacrosImpl - Loaded path macros: {MAVEN_REPOSITORY=C:\Users\27509\.m2\repository}
+2025-12-27 12:26:47,543 [    392]   INFO - #c.i.o.a.ConfigImportHelper - [i18n] Localization property from registry is null
+2025-12-27 12:26:47,562 [    411]   WARN - c.i.o.u.r.overrides - Conflicting registry key definition for key kotlin.mpp.tests.force.gradle: it was defined by plugin org.jetbrains.kotlin but redefined by plugin org.jetbrains.kotlin. Consider adding overrides="true" for one of the plugins, see the documentation for com.intellij.openapi.util.registry.RegistryKeyBean.overrides for more details.
+2025-12-27 12:26:47,573 [    422]   INFO - #c.i.o.u.r.RegistryManager - Registry values changed by user: i18n.locale = , ide.experimental.ui = true, idea.plugins.compatible.build = 
+2025-12-27 12:26:47,588 [    437]   INFO - #c.i.o.v.n.p.FSRecords - VFS health-check enabled: first after 600000 ms, and each following 43200000 ms, wrap in RA: true
+2025-12-27 12:26:47,595 [    444]   INFO - #c.i.i.p.ExpiredPluginsState - Plugins to skip: []
+2025-12-27 12:26:47,634 [    483]   INFO - #c.i.o.v.i.l.NativeFileWatcherImpl - Starting file watcher: C:\Users\27509\.gradle\caches\9.0.0\transforms\d42469f8ee268be816e8b6b9ee138460\transformed\ideaIC-2024.3-win\bin\fsnotifier.exe
+2025-12-27 12:26:47,663 [    512]   INFO - #c.i.u.i.c.d.IndexWriter - Use com.intellij.util.indexing.contentQueue.dev.MultiThreadedWithSuspendIndexWriter@7ff34c2 as (parallel) index writer implementation
+2025-12-27 12:26:47,666 [    515]   INFO - #c.i.u.i.i.SlruIndexStorageCacheProvider - SLRU cache will be used for indexes
+2025-12-27 12:26:47,666 [    515]   INFO - #c.i.u.i.i.MapIndexStorageCacheProvider$Companion - Default index storage cache provider [com.intellij.util.indexing.impl.SlruIndexStorageCacheProvider@5023c8b6] is used
+2025-12-27 12:26:47,771 [    620]   INFO - #c.i.o.v.n.p.FSRecordsImpl - VFS scanned: file-by-name index was populated
+2025-12-27 12:26:47,774 [    623]   INFO - #c.i.o.v.i.l.NativeFileWatcherImpl - Native file watcher is operational.
+2025-12-27 12:26:47,781 [    630]   INFO - #c.i.o.v.i.w.WslFileWatcher - WSL file watcher: C:\Users\27509\.gradle\caches\9.0.0\transforms\d42469f8ee268be816e8b6b9ee138460\transformed\ideaIC-2024.3-win\bin\fsnotifier-wsl
+2025-12-27 12:26:47,793 [    642]   INFO - #c.i.u.n.s.CertificateManager - Default SSL context initialized
+2025-12-27 12:26:47,806 [    655]   INFO - #c.i.p.p.ProjectEntitiesStorage - Creating entity for project ProjectId(id=2tsj9u6u0gae6l3hds0m)
+2025-12-27 12:26:47,819 [    668]   INFO - #c.i.p.p.ProjectEntitiesStorage - Entity for project ProjectId(id=2tsj9u6u0gae6l3hds0m) created successfully
+2025-12-27 12:26:47,873 [    722]   INFO - #o.j.i.BuiltInServerManager - built-in server started, port 63343
+2025-12-27 12:26:47,875 [    724]   INFO - #c.i.i.s.p.i.SharedIndexMainZipStorage - Shared Indexes Storage is opened and empty
+2025-12-27 12:26:47,889 [    738]   WARN - #c.i.i.s.p.i.BundledSharedIndexProvider - Bundled shared index is not found at: C:\Users\27509\.gradle\caches\9.0.0\transforms\d42469f8ee268be816e8b6b9ee138460\transformed\ideaIC-2024.3-win\jdk-shared-indexes
+2025-12-27 12:26:47,904 [    753]   INFO - #c.i.u.i.PersistentDirtyFilesQueue - Dirty file ids read. Size: 801. Index: 801 Path: D:\work_self\JumpToAntigravity\JumpToAntigravity\build\idea-sandbox\IC-2024.3\system\index\dirty-file-ids.
+2025-12-27 12:26:48,194 [   1043]   WARN - #c.i.e.w.WslDistributionManager - Failed to run C:\WINDOWS\system32\wsl.exe --list --verbose: {exitCode=1, timeout=false, cancelled=false, stdout=, stderr=未安装适用于 Linux 的 Windows 子系统。可通过运行 “wsl.exe --install” 进行安装。
+有关详细信息，请访问 https://aka.ms/wslinstall
+}, done in 82 ms
+java.io.IOException: Failed to run C:\WINDOWS\system32\wsl.exe --list --verbose: {exitCode=1, timeout=false, cancelled=false, stdout=, stderr=未安装适用于 Linux 的 Windows 子系统。可通过运行 “wsl.exe --install” 进行安装。
+有关详细信息，请访问 https://aka.ms/wslinstall
+}, done in 82 ms
+	at com.intellij.execution.wsl.WslDistributionManagerImpl.loadInstalledDistributionsWithVersions(WslDistributionManagerImpl.java:85)
+	at com.intellij.execution.wsl.WslDistributionManager.loadInstalledDistributions(WslDistributionManager.java:167)
+	at com.intellij.execution.wsl.WslDistributionManager.getInstalledDistributions(WslDistributionManager.java:86)
+	at com.intellij.execution.wsl.ijent.nio.toggle.IjentWslNioFsToggleStrategy$enableForAllWslDistributions$3.invokeSuspend(IjentNioFsStrategy.kt:67)
+	at com.intellij.execution.wsl.ijent.nio.toggle.IjentWslNioFsToggleStrategy$enableForAllWslDistributions$3.invoke(IjentNioFsStrategy.kt)
+	at com.intellij.execution.wsl.ijent.nio.toggle.IjentWslNioFsToggleStrategy$enableForAllWslDistributions$3.invoke(IjentNioFsStrategy.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:62)
+	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:261)
+	at com.intellij.execution.wsl.ijent.nio.toggle.IjentWslNioFsToggleStrategy.enableForAllWslDistributions(IjentNioFsStrategy.kt:66)
+	at com.intellij.execution.wsl.ijent.nio.toggle.IjentWslNioFsToggler.enableForAllWslDistributions(IjentWslNioFsToggler.kt:51)
+	at com.intellij.execution.wsl.ijent.nio.toggle.IjentWslNioFsVmOptionsSetter$ApplicationListener$applicationActivated$1.invokeSuspend(IjentWslNioFsVmOptionsSetter.kt:164)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2025-12-27 12:26:48,268 [   1117]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'IdIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,268 [   1117]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'DomFileIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,268 [   1117]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'fileIncludes' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,268 [   1117]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'filetypes' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,268 [   1117]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'RelaxSymbolIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,268 [   1117]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'Stubs' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,268 [   1117]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'FilenameIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,268 [   1117]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'XmlTagNames' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,268 [   1117]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'Trigram.Index' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,268 [   1117]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'FrameworkDetectionIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,268 [   1117]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'TodoIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,291 [   1140]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'XmlNamespaces' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,341 [   1190]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'html5.custom.attributes.index' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,341 [   1190]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'editorconfig.index.name' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,342 [   1191]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'xmlProperties' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,342 [   1191]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'json.file.root.values' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,343 [   1192]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'HtmlTagIdIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,343 [   1192]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'SchemaTypeInheritance' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,346 [   1195]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'java.auto.module.name' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,356 [   1205]   INFO - #c.i.w.i.i.WorkspaceModelImpl - Load workspace model from cache in 213 ms
+2025-12-27 12:26:48,376 [   1225]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'java.source.module.name' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,376 [   1225]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'java.null.method.argument' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,378 [   1227]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'java.fun.expression' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,385 [   1234]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'java.binary.plus.expression' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,390 [   1239]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'bytecodeAnalysis' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,393 [   1242]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'JavaFxControllerClassIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,406 [   1255]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'javafx.id.name' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,435 [   1284]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'javafx.custom.component' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,440 [   1289]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,442 [   1291]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.versions.KotlinJsMetadataVersionIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,452 [   1301]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,452 [   1301]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,453 [   1302]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,453 [   1302]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinJavaScriptMetaFileIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,453 [   1302]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,473 [   1322]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinModuleMappingIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,479 [   1328]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'KotlinPackageSourcesMemberNamesIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,487 [   1336]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,487 [   1336]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KlibMetaFileIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,488 [   1337]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,488 [   1337]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'KotlinTopLevelCallableByPackageShortNameIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,488 [   1337]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinJvmModuleAnnotationsIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,489 [   1338]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'KotlinBinaryRootToPackageIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,489 [   1338]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-27 12:26:48,546 [   1395]   INFO - #c.i.u.i.FileBasedIndexImpl - Indices to be built:FilenameIndex(v = 258)
+2025-12-27 12:26:48,548 [   1397]   INFO - #c.i.u.i.FileBasedIndexImpl - Using nice flusher for indexes
+2025-12-27 12:26:48,562 [   1411]   INFO - #c.i.u.i.IndexDataInitializer - Index data initialization done: 759 ms. Initialized indexes: [FilenameIndex, XmlTagNames, Trigram.Index, RelaxSymbolIndex, DomFileIndex, filetypes, FrameworkDetectionIndex, XmlNamespaces, IdIndex, java.auto.module.name, TodoIndex, html5.custom.attributes.index, fileIncludes, SchemaTypeInheritance, editorconfig.index.name, java.null.method.argument, bytecodeAnalysis, json.file.root.values, xmlProperties, HtmlTagIdIndex, java.source.module.name, java.binary.plus.expression, JavaFxControllerClassIndex, java.fun.expression, org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex, javafx.id.name, javafx.custom.component, org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex, org.jetbrains.kotlin.idea.versions.KotlinJsMetadataVersionIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinModuleMappingIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinJavaScriptMetaFileIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex, KotlinPackageSourcesMemberNamesIndex, KotlinBinaryRootToPackageIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex, KotlinTopLevelCallableByPackageShortNameIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex, org.jetbrains.kotlin.idea.vfilefinder.KlibMetaFileIndex, KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinJvmModuleAnnotationsIndex, Stubs].
+2025-12-27 12:26:48,641 [   1490]   INFO - #c.i.w.i.i.GlobalWorkspaceModel - Load global workspace model from cache in 19 ms
+2025-12-27 12:26:48,672 [   1521]   INFO - #c.i.w.i.i.EntitiesOrphanageImpl - Update orphanage. 0 modules added
+2025-12-27 12:26:48,683 [   1532]   INFO - #c.i.w.i.i.WorkspaceModelImpl - Project model updated to version 4 in 66 ms: Change entity sources to externally imported
+2025-12-27 12:26:48,789 [   1638]   INFO - #c.i.u.i.IndexDataInitializer - Index data initialization done: 226 ms. Initialized stub indexes: {gr.annot.method.name, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelClassByPackageIndex, KotlinProbablyNothingPropertyShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinInnerTypeAliasClassIdIndex, KotlinTopLevelPropertyByPackageIndex, properties.index, org.jetbrains.kotlin.idea.stubindex.KotlinAnnotationsIndex, KotlinFileFacadeClassByPackageIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFullClassNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFunctionShortNameIndex, gr.script.fqn.s, org.jetbrains.kotlin.idea.stubindex.KotlinTypeAliasShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinSuperClassIndex, KotlinTopLevelExpectFunctionFqNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelFunctionFqnNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinSubclassObjectNameIndex, java.module.name, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelPropertyFqnNameIndex, java.method.name, java.class.shortname, jvm.static.member.name, jvm.static.member.type, KotlinTopLevelExpectPropertyFqNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinJvmNameAnnotationIndex, markdown.header, org.jetbrains.kotlin.idea.stubindex.KotlinScriptFqnIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFilePartClassIndex, gr.class.super, java.method.parameter.types, gr.method.name, gr.field.name, kotlin.primeIndexKey, dom.elementClass, gr.class.fqn.s, KotlinTopLevelFunctionByPackageIndex, markdown.header.anchor, org.jetbrains.kotlin.idea.stubindex.KotlinMultifileClassPartIndex, org.jetbrains.kotlin.idea.stubindex.KotlinPropertyShortNameIndex, java.annotations, KotlinTypeAliasByExpansionShortNameIndex, gr.annot.members, gr.anonymous.class, KotlinProbablyNothingFunctionShortNameIndex, dom.namespaceKey, gr.script.class, java.anonymous.baseref, KotlinProbablyContractedFunctionShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeShortNameIndex, KotlinOverridableInternalMembersShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeFqNameIndex, java.unnamed.class, KotlinTopLevelExtensionsByReceiverTypeIndex, java.field.name, java.class.extlist, org.jetbrains.kotlin.idea.stubindex.KotlinClassShortNameIndex, KotlinTopLevelTypeAliasByPackageIndex, org.jetbrains.kotlin.idea.stubindex.KotlinExactPackagesIndex, java.class.fqn, KotlinExtensionsInObjectsByReceiverTypeIndex, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelTypeAliasFqNameIndex}.
+2025-12-27 12:26:48,796 [   1645]   INFO - #o.j.k.i.g.s.r.GradleBuildRootIndex - D:/work_self/JumpToAntigravity/JumpToAntigravity: null -> org.jetbrains.kotlin.idea.gradleJava.scripting.roots.Imported@7b76d504
+2025-12-27 12:26:48,878 [   1727]   INFO - #c.i.w.i.i.GlobalWorkspaceModel - Global model updated to version 2 in 3 ms: Sync entities from project JumpToAntigravity with global storage
+2025-12-27 12:26:48,878 [   1727]   INFO - #c.i.w.i.i.EntitiesOrphanageImpl - Update orphanage. 0 modules added
+2025-12-27 12:26:48,879 [   1728]   INFO - #c.i.w.i.i.WorkspaceModelImpl - Project model updated to version 6 in 17 ms: Sync global entities with project: JumpToAntigravity
+2025-12-27 12:26:48,884 [   1733]   INFO - #c.i.o.a.i.NonBlockingReadActionImpl - OTel monitoring for NonBlockingReadAction is enabled
+2025-12-27 12:26:48,965 [   1814]   INFO - #o.j.p.g.GradleManager - Instructing gradle to use java from C:\Program Files\BellSoft\LibericaJDK-21-Full\
+2025-12-27 12:26:48,968 [   1817]   INFO - #o.j.k.i.script - [KOTLIN_SCRIPTING] Loading script definitions: classes = [org.gradle.kotlin.dsl.KotlinInitScript, org.gradle.kotlin.dsl.KotlinSettingsScript, org.gradle.kotlin.dsl.KotlinBuildScript], classpath = [C:\Users\27509\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0\lib\gradle-core-9.0.0.jar, C:\Users\27509\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0\lib\gradle-core-api-9.0.0.jar, C:\Users\27509\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0\lib\gradle-core-kotlin-extensions-9.0.0.jar, C:\Users\27509\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0\lib\gradle-kotlin-dsl-9.0.0.jar, C:\Users\27509\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0\lib\gradle-kotlin-dsl-extensions-9.0.0.jar, C:\Users\27509\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0\lib\gradle-kotlin-dsl-shared-runtime-9.0.0.jar, C:\Users\27509\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0\lib\gradle-kotlin-dsl-tooling-models-9.0.0.jar, C:\Users\27509\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0\lib\kotlin-stdlib-2.2.0.jar, C:\Users\27509\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0\lib\kotlin-compiler-embeddable-2.2.0.jar]
+2025-12-27 12:26:49,040 [   1889]   INFO - #o.j.k.i.script - [KOTLIN_SCRIPTING] Loaded definitions: classes = [org.gradle.kotlin.dsl.KotlinInitScript, org.gradle.kotlin.dsl.KotlinSettingsScript, org.gradle.kotlin.dsl.KotlinBuildScript], definitions = [KotlinInitScript, KotlinSettingsScript, KotlinBuildScript]
+2025-12-27 12:26:49,052 [   1901]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=org.jetbrains.kotlin.idea.search.refIndex.KotlinCompilerReferenceIndexService, plugin=org.jetbrains.kotlin)
+2025-12-27 12:26:49,052 [   1901]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.project.MavenProjectsManagerEx, plugin=org.jetbrains.idea.maven)
+2025-12-27 12:26:49,052 [   1901]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.navigator.MavenProjectsNavigator, plugin=org.jetbrains.idea.maven)
+2025-12-27 12:26:49,052 [   1901]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.tasks.MavenShortcutsManager, plugin=org.jetbrains.idea.maven)
+2025-12-27 12:26:49,052 [   1901]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2025-12-27 12:26:49,053 [   1902]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendUserManager, plugin=com.jetbrains.codeWithMe)
+2025-12-27 12:26:49,053 [   1902]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.ports.CwmPortForwardingToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2025-12-27 12:26:49,053 [   1902]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeManagerService, plugin=com.jetbrains.codeWithMe)
+2025-12-27 12:26:49,110 [   1959]   INFO - #c.i.c.p.f.FollowMeManager - Register new user (name: '27509', client id: Host)
+2025-12-27 12:26:49,116 [   1965]   INFO - PerformancePlugin - Performance Plugin is in silent mode
+2025-12-27 12:26:49,170 [   2019]   INFO - #c.i.o.v.i.p.NewMappings - VCS Root: [Git] - [D:/work_self/JumpToAntigravity/JumpToAntigravity]
+2025-12-27 12:26:49,208 [   2057]   INFO - #c.i.r.OsRegistryConfigProvider - Looking for 'enabled' value in [HKLM_64\SOFTWARE\JetBrains\portForwarding\enabled, HKLM_32\SOFTWARE\JetBrains\portForwarding\enabled, HKCU_64\SOFTWARE\JetBrains\portForwarding\enabled, HKCU_32\SOFTWARE\JetBrains\portForwarding\enabled]
+2025-12-27 12:26:49,210 [   2059]   INFO - #c.i.r.OsRegistryConfigProvider - OS provided value for 'enabled' is not found
+2025-12-27 12:26:49,223 [   2072]   INFO - #c.i.p.c.ProjectCodeStyleSettingsManager - Initialized from default code style settings.
+2025-12-27 12:26:49,312 [   2161]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) com.intellij.openapi.project.InitialDumbTaskRequiredForSmartMode@55291e02
+2025-12-27 12:26:49,320 [   2169]   INFO - #c.i.o.p.DumbServiceMergingTaskQueue - Initializing DumbServiceMergingTaskQueue...
+2025-12-27 12:26:49,322 [   2171]   INFO - #c.i.o.p.DumbServiceMergingTaskQueue - Running initialization condition: com.intellij.indexing.shared.download.SharedIndexDownloadedCondition@48ce757f
+2025-12-27 12:26:49,322 [   2171]   INFO - #c.i.u.i.c.ManagedPersistentCache - created graved-doc-render-jumptoantigravity-ca240455 with size 2
+2025-12-27 12:26:49,322 [   2171]   INFO - #c.i.u.i.c.ManagedPersistentCache - created graved-declarative-hints-jumptoantigravity-ca240455 with size 2
+2025-12-27 12:26:49,322 [   2171]   INFO - #c.i.u.i.c.ManagedPersistentCache - created graved-code-vision-jumptoantigravity-ca240455 with size 2
+2025-12-27 12:26:49,322 [   2171]   INFO - #c.i.u.i.c.ManagedPersistentCache - created graved-highlighting-jumptoantigravity-ca240455 with size 1
+2025-12-27 12:26:49,323 [   2172]   INFO - #c.i.u.i.c.ManagedPersistentCache - created graved-parameter-hints-jumptoantigravity-ca240455 with size 2
+2025-12-27 12:26:49,322 [   2171]   INFO - #c.i.u.i.c.ManagedPersistentCache - created graved-code-folding-jumptoantigravity-ca240455 with size 2
+2025-12-27 12:26:49,325 [   2174]   INFO - #c.i.o.p.DumbServiceMergingTaskQueue - Finished: com.intellij.indexing.shared.download.SharedIndexDownloadedCondition@48ce757f
+2025-12-27 12:26:49,336 [   2185]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Running task required for smart mode: com.intellij.indexing.shared.platform.impl.OnDiskSharedIndexChunkLocator@3e40f41f
+2025-12-27 12:26:49,340 [   2189]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Finished task required for smart mode: com.intellij.indexing.shared.platform.impl.OnDiskSharedIndexChunkLocator@3e40f41f
+2025-12-27 12:26:49,341 [   2190]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Running task required for smart mode: com.intellij.util.indexing.ProjectFileBasedIndexStartupActivity@6a296525
+2025-12-27 12:26:49,359 [   2208]   INFO - #c.i.u.i.PersistentDirtyFilesQueue - Dirty file ids read. Size: 0. Index: 786 Path: D:\work_self\JumpToAntigravity\JumpToAntigravity\build\idea-sandbox\IC-2024.3\system\index\dirty-file-queues\ca240455.
+2025-12-27 12:26:49,361 [   2210]   INFO - #c.i.u.i.p.IncrementalProjectIndexableFilesFilterHolder - PersistentProjectIndexableFilesFilterFactory is chosen as indexable files filter factory for project: JumpToAntigravity
+2025-12-27 12:26:49,432 [   2281]   INFO - #c.i.u.i.UnindexedFilesScanner - Full scanning on startup will be skipped for project JumpToAntigravity
+2025-12-27 12:26:49,441 [   2290]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Finished task required for smart mode: com.intellij.util.indexing.ProjectFileBasedIndexStartupActivity@6a296525
+2025-12-27 12:26:49,452 [   2301]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Running task required for smart mode: com.intellij.util.indexing.FileBasedIndexInfrastructureExtensionStartup@4d87649b
+2025-12-27 12:26:49,454 [   2303]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Finished task required for smart mode: com.intellij.util.indexing.FileBasedIndexInfrastructureExtensionStartup@4d87649b
+2025-12-27 12:26:49,456 [   2305]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Running task required for smart mode: com.intellij.externalDependencies.impl.CheckRequiredPluginsActivity@334b9e6d
+2025-12-27 12:26:49,458 [   2307]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Finished task required for smart mode: com.intellij.externalDependencies.impl.CheckRequiredPluginsActivity@334b9e6d
+2025-12-27 12:26:49,460 [   2309]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Running task required for smart mode: com.intellij.util.indexing.DumbModeWhileScanningSubscriber@129ad4d5
+2025-12-27 12:26:49,465 [   2314]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Finished task required for smart mode: com.intellij.util.indexing.DumbModeWhileScanningSubscriber@129ad4d5
+2025-12-27 12:26:49,475 [   2324]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Running task required for smart mode: com.intellij.ide.projectWizard.generators.SdkPreIndexingRequiredForSmartModeActivity@39e9e383
+2025-12-27 12:26:49,478 [   2327]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Finished task required for smart mode: com.intellij.ide.projectWizard.generators.SdkPreIndexingRequiredForSmartModeActivity@39e9e383
+2025-12-27 12:26:49,478 [   2327]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) com.intellij.openapi.project.InitialDumbTaskRequiredForSmartMode@55291e02
+2025-12-27 12:26:49,512 [   2361]   INFO - #c.i.i.p.i.ProjectViewInitNotifier - Project View initialization started
+2025-12-27 12:26:49,621 [   2470]   INFO - #c.i.i.p.i.ProjectViewInitNotifier - Project View cached nodes loaded
+2025-12-27 12:26:49,874 [   2723]   INFO - #c.i.s.c.s.IdeStationServerService$Companion - Discovery is disabled
+2025-12-27 12:26:49,942 [   2791]   INFO - #c.i.c.p.p.ProvisionedCodeWithMeEnterpriseConfiguration - No JBIDES plugin found. Using public/self-configured CWM.
+2025-12-27 12:26:49,943 [   2792]   INFO - #c.i.r.OsRegistryConfigProvider - Looking for 'isCodeWithMeHostEnabled' value in [HKLM_64\SOFTWARE\JetBrains\CodeWithMe\isCodeWithMeHostEnabled, HKLM_32\SOFTWARE\JetBrains\CodeWithMe\isCodeWithMeHostEnabled, HKCU_64\SOFTWARE\JetBrains\CodeWithMe\isCodeWithMeHostEnabled, HKCU_32\SOFTWARE\JetBrains\CodeWithMe\isCodeWithMeHostEnabled]
+2025-12-27 12:26:49,944 [   2793]   INFO - #c.i.r.OsRegistryConfigProvider - OS provided value for 'isCodeWithMeHostEnabled' is not found
+2025-12-27 12:26:49,944 [   2793]   INFO - #c.i.r.OsRegistryConfigProvider - Looking for 'lobbyServerUrl' value in [HKLM_64\SOFTWARE\JetBrains\CodeWithMe\lobbyServerUrl, HKLM_32\SOFTWARE\JetBrains\CodeWithMe\lobbyServerUrl, HKCU_64\SOFTWARE\JetBrains\CodeWithMe\lobbyServerUrl, HKCU_32\SOFTWARE\JetBrains\CodeWithMe\lobbyServerUrl]
+2025-12-27 12:26:49,945 [   2794]   INFO - #c.i.r.OsRegistryConfigProvider - OS provided value for 'lobbyServerUrl' is not found
+2025-12-27 12:26:49,946 [   2795]   INFO - #c.i.c.p.o.CodeWithMeSystemSettings - Got regional URL for CHINA: https://code-with-me.jetbrains.com.cn
+2025-12-27 12:26:50,087 [   2936]   INFO - #c.i.o.a.i.ActionUpdater - 621 ms to grab EDT for ToolWindowHeader$2#children@ToolwindowTitle (com.intellij.toolWindow.ToolWindowHeader$2)
+2025-12-27 12:26:50,091 [   2940]   INFO - #c.i.o.p.DumbServiceImpl - exit dumb mode [JumpToAntigravity]
+2025-12-27 12:26:50,092 [   2941]   INFO - #c.i.o.p.UnindexedFilesScannerExecutor - [ca240455] Running task: com.intellij.util.indexing.UnindexedFilesScannerExecutorImpl$ScheduledScanningTask@69664981
+2025-12-27 12:26:50,096 [   2945]   INFO - #c.i.u.i.UnindexedFilesScanner - [ca240455], scanning stage: DelayedPushProperties
+2025-12-27 12:26:50,096 [   2945]   INFO - #c.i.u.i.FilesFilterScanningHandler$IdleFilesFilterScanningHandler - Scanning will happen without filling of project indexable files filter
+2025-12-27 12:26:50,100 [   2949]   INFO - #c.i.u.i.UnindexedFilesScanner - Started scanning for indexing of JumpToAntigravity. Reason: On project open
+2025-12-27 12:26:50,102 [   2951]   INFO - #c.i.u.i.UnindexedFilesScanner - [ca240455], scanning stage: CreatingIterators
+2025-12-27 12:26:50,102 [   2951]   INFO - #c.i.u.i.UnindexedFilesScanner - [ca240455], scanning stage: CollectingIndexableFiles
+2025-12-27 12:26:50,103 [   2952]   INFO - #c.i.o.a.i.ActionUpdater - 468 ms to grab EDT for ToolWindowHeader$2#children@ToolwindowTitle (com.intellij.toolWindow.ToolWindowHeader$2)
+2025-12-27 12:26:50,104 [   2953]   INFO - #c.i.u.i.UnindexedFilesScanner - Scanning of JumpToAntigravity uses 11 scanning threads
+2025-12-27 12:26:50,116 [   2965]   INFO - #c.i.u.i.UnindexedFilesScanner - Scanning completed for JumpToAntigravity. Number of scanned files: 0; number of files for indexing: 0
+2025-12-27 12:26:50,116 [   2965]   INFO - #c.i.o.p.InitialVfsRefreshService - ca240455: marking roots for initial VFS refresh
+2025-12-27 12:26:50,120 [   2969]   INFO - #c.i.o.p.InitialVfsRefreshService - ca240455: starting initial VFS refresh of 36 roots
+2025-12-27 12:26:50,123 [   2972]   INFO - #c.i.u.i.PerProjectIndexingQueue - Finished for JumpToAntigravity. No files to index with loading content.
+2025-12-27 12:26:50,124 [   2973]   INFO - #c.i.o.p.UnindexedFilesScannerExecutor - [ca240455] Task finished: com.intellij.util.indexing.UnindexedFilesScannerExecutorImpl$ScheduledScanningTask@69664981
+2025-12-27 12:26:50,194 [   3043]   INFO - #c.i.w.i.i.EntitiesOrphanageImpl - Update orphanage. 0 modules added
+2025-12-27 12:26:50,478 [   3327]   INFO - #c.i.o.u.i.UpdateCheckerService - channel: release
+2025-12-27 12:26:50,483 [   3332]   INFO - #c.i.o.a.ConfigImportHelper - [i18n] Localization property from registry is null
+2025-12-27 12:26:50,499 [   3348]   WARN - #c.i.o.a.Application - issue detected: ide.script.launcher.used
+2025-12-27 12:26:50,638 [   3487] SEVERE - #c.i.c.ComponentStoreImpl - Cannot init component state (componentName=GradleJvmSupportMatrix, componentClass=GradleJvmSupportMatrix) [Plugin: com.intellij.gradle]
+com.intellij.diagnostic.PluginException: Cannot init component state (componentName=GradleJvmSupportMatrix, componentClass=GradleJvmSupportMatrix) [Plugin: com.intellij.gradle]
+	at com.intellij.configurationStore.ComponentStoreImpl.initComponent(ComponentStoreImpl.kt:170)
+	at com.intellij.configurationStore.ComponentStoreWithExtraComponents.initComponent(ComponentStoreWithExtraComponents.kt:46)
+	at com.intellij.serviceContainer.ComponentManagerImpl.initializeService$intellij_platform_serviceContainer(ComponentManagerImpl.kt:657)
+	at com.intellij.serviceContainer.ServiceInstanceInitializer.createInstance$lambda$1$lambda$0(ServiceInstanceInitializer.kt:69)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt.withStoredTemporaryContext(instantiate.kt:328)
+	at com.intellij.serviceContainer.ServiceInstanceInitializer.createInstance$suspendImpl(ServiceInstanceInitializer.kt:68)
+	at com.intellij.serviceContainer.ServiceInstanceInitializer.createInstance(ServiceInstanceInitializer.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invokeSuspend(LazyInstanceHolder.kt:163)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invoke(LazyInstanceHolder.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invoke(LazyInstanceHolder.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:62)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:163)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invokeSuspend(LazyInstanceHolder.kt:161)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invoke(LazyInstanceHolder.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invoke(LazyInstanceHolder.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:27)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:90)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:123)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:52)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.initialize(LazyInstanceHolder.kt:146)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.access$initialize(LazyInstanceHolder.kt:14)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.tryInitialize(LazyInstanceHolder.kt:136)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstance(LazyInstanceHolder.kt:96)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstanceInCallerContext$suspendImpl(LazyInstanceHolder.kt:88)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstanceInCallerContext(LazyInstanceHolder.kt)
+	at com.intellij.serviceContainer.ComponentManagerImplKt$doGetOrCreateInstanceBlocking$1.invokeSuspend(ComponentManagerImpl.kt:1566)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:277)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:111)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$BuildersKt__BuildersKt(Builders.kt:84)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:52)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at com.intellij.serviceContainer.ComponentManagerImplKt.runBlockingInitialization$lambda$10(ComponentManagerImpl.kt:1684)
+	at com.intellij.openapi.progress.ContextKt.prepareThreadContext(context.kt:82)
+	at com.intellij.serviceContainer.ComponentManagerImplKt.runBlockingInitialization(ComponentManagerImpl.kt:1675)
+	at com.intellij.serviceContainer.ComponentManagerImplKt.doGetOrCreateInstanceBlocking(ComponentManagerImpl.kt:1565)
+	at com.intellij.serviceContainer.ComponentManagerImplKt.getOrCreateInstanceBlocking(ComponentManagerImpl.kt:1560)
+	at com.intellij.serviceContainer.ComponentManagerImpl.doGetService(ComponentManagerImpl.kt:751)
+	at com.intellij.serviceContainer.ComponentManagerImpl.getService(ComponentManagerImpl.kt:695)
+	at org.jetbrains.plugins.gradle.jvmcompat.GradleJvmSupportMatrix$Companion.getInstance(GradleJvmSupportMatrix.kt:224)
+	at org.jetbrains.plugins.gradle.jvmcompat.GradleCompatibilitySupportUpdater.<init>(GradleCompatibilitySupportUpdater.kt:16)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt.instantiate$lambda$0(instantiate.kt:46)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt.instantiate$lambda$8$lambda$7(instantiate.kt:310)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt.withStoredTemporaryContext(instantiate.kt:328)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt.instantiate(instantiate.kt:309)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt.instantiate(instantiate.kt:43)
+	at com.intellij.serviceContainer.ServiceInstanceInitializer.createInstance$suspendImpl(ServiceInstanceInitializer.kt:30)
+	at com.intellij.serviceContainer.ServiceInstanceInitializer.createInstance(ServiceInstanceInitializer.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invokeSuspend(LazyInstanceHolder.kt:163)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invoke(LazyInstanceHolder.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invoke(LazyInstanceHolder.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:62)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:163)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invokeSuspend(LazyInstanceHolder.kt:161)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invoke(LazyInstanceHolder.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invoke(LazyInstanceHolder.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:27)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:90)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:123)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:52)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.initialize(LazyInstanceHolder.kt:146)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.access$initialize(LazyInstanceHolder.kt:14)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.tryInitialize(LazyInstanceHolder.kt:136)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstance(LazyInstanceHolder.kt:96)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstance$suspendImpl(LazyInstanceHolder.kt:84)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstance(LazyInstanceHolder.kt)
+	at com.intellij.platform.instanceContainer.internal.InstanceContainerImpl.instance(InstanceContainerImpl.kt:67)
+	at com.intellij.serviceContainer.ComponentManagerImpl.getServiceAsync(ComponentManagerImpl.kt:699)
+	at org.jetbrains.plugins.gradle.service.project.GradleVersionUpdateStartupActivity.execute(GradleVersionUpdateStartupActivity.kt:26)
+	at com.intellij.ide.startup.impl.StartupManagerImplKt$launchActivity$1.invokeSuspend(StartupManagerImpl.kt:496)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+Caused by: java.lang.IllegalArgumentException: 25
+	at com.intellij.util.lang.JavaVersion.parse(JavaVersion.java:308)
+	at org.jetbrains.plugins.gradle.jvmcompat.GradleJvmSupportMatrix$getCompatibilityRanges$1$javaRange$1.invoke(GradleJvmSupportMatrix.kt:44)
+	at org.jetbrains.plugins.gradle.jvmcompat.GradleJvmSupportMatrix$getCompatibilityRanges$1$javaRange$1.invoke(GradleJvmSupportMatrix.kt:44)
+	at org.jetbrains.plugins.gradle.jvmcompat.IdeVersionedDataParser$Companion.parseVersion(IdeVersionedDataParser.kt:21)
+	at org.jetbrains.plugins.gradle.jvmcompat.IdeVersionedDataParser$Companion.parseRange(IdeVersionedDataParser.kt:31)
+	at org.jetbrains.plugins.gradle.jvmcompat.GradleJvmSupportMatrix.getCompatibilityRanges(GradleJvmSupportMatrix.kt:44)
+	at org.jetbrains.plugins.gradle.jvmcompat.GradleJvmSupportMatrix.applyState(GradleJvmSupportMatrix.kt:28)
+	at org.jetbrains.plugins.gradle.jvmcompat.GradleJvmSupportMatrix.onStateChanged(GradleJvmSupportMatrix.kt:50)
+	at org.jetbrains.plugins.gradle.jvmcompat.GradleJvmSupportMatrix.onStateChanged(GradleJvmSupportMatrix.kt:13)
+	at org.jetbrains.plugins.gradle.jvmcompat.IdeVersionedDataStorage.loadState(IdeVersionedDataStorage.kt:38)
+	at org.jetbrains.plugins.gradle.jvmcompat.IdeVersionedDataStorage.loadState(IdeVersionedDataStorage.kt:7)
+	at com.intellij.configurationStore.ComponentStoreImpl.doInitComponent(ComponentStoreImpl.kt:510)
+	at com.intellij.configurationStore.ComponentStoreImpl.initComponent(ComponentStoreImpl.kt:430)
+	at com.intellij.configurationStore.ComponentStoreImpl.initComponent(ComponentStoreImpl.kt:145)
+	... 80 more
+2025-12-27 12:26:50,638 [   3487]   INFO - #o.j.k.i.PluginStartupActivity - Kotlin plugin mode: K1
+2025-12-27 12:26:50,653 [   3502] SEVERE - #c.i.c.ComponentStoreImpl - IntelliJ IDEA 2024.3  Build #IC-243.21565.193
+2025-12-27 12:26:50,653 [   3502] SEVERE - #c.i.c.ComponentStoreImpl - JDK: 21.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o.
+2025-12-27 12:26:50,653 [   3502] SEVERE - #c.i.c.ComponentStoreImpl - OS: Windows 11
+2025-12-27 12:26:50,653 [   3502] SEVERE - #c.i.c.ComponentStoreImpl - Last Action: 
+2025-12-27 12:26:50,673 [   3522]   INFO - #c.i.o.p.InitialVfsRefreshService - ca240455: initial VFS refresh finished in 551 ms
+2025-12-27 12:26:50,689 [   3538]   INFO - #git4idea.commands.GitHandler - [.] git version
+2025-12-27 12:26:50,696 [   3545]   INFO - #c.i.i.s.IdeStartupScripts - 0 startup script(s) found
+2025-12-27 12:26:50,708 [   3557]   INFO - #c.i.d.PerformanceWatcherImpl - Post-startup activities under progress took 106ms; general responsiveness: ok; EDT responsiveness: ok
+2025-12-27 12:26:50,805 [   3654]   INFO - #git4idea.commands.GitHandler - git version 2.41.0.windows.3
+2025-12-27 12:26:50,837 [   3686]   INFO - #git4idea.config.GitExecutableFileTester - Git version for C:\Program Files\Git\cmd\git.exe: 2.41.0.0 (MSYS)
+2025-12-27 12:26:50,921 [   3770]   INFO - #c.i.o.a.i.ActionUpdater - 322 ms to grab EDT for EditorMarkupModelImpl$TrafficLightAction#presentation@EditorInspectionsToolbar (com.intellij.openapi.editor.impl.EditorMarkupModelImpl$TrafficLightAction)
+2025-12-27 12:26:50,921 [   3770]   INFO - #c.i.o.a.i.ActionUpdater - 322 ms to grab EDT for EditorMarkupModelImpl$NavigationGroup#presentation@EditorInspectionsToolbar (com.intellij.openapi.editor.impl.EditorMarkupModelImpl$NavigationGroup)
+2025-12-27 12:26:50,922 [   3771]   INFO - #c.i.o.a.i.ActionUpdater - 321 ms to grab EDT for FontEditorPreview$RestorePreviewTextAction#presentation@ContextToolbar (com.intellij.application.options.colors.FontEditorPreview$RestorePreviewTextAction)
+2025-12-27 12:26:50,922 [   3771]   INFO - #c.i.o.a.i.ActionUpdater - 322 ms to grab EDT for FontEditorPreview$ToggleBoldFontAction#presentation@ContextToolbar (com.intellij.application.options.colors.FontEditorPreview$ToggleBoldFontAction)
+2025-12-27 12:26:50,998 [   3847]   INFO - #c.i.p.u.i.s.e.DurableEnumeratorFactory - [enumerator.mmapped]: .valueHashToId (in memory) was filled (40 records)
+2025-12-27 12:26:51,155 [   4004]   INFO - #c.i.v.l.d.VcsLogData - Vcs log index is turned off in the registry
+2025-12-27 12:26:51,364 [   4213]   INFO - #c.i.o.e.s.p.m.ExternalProjectsDataStorage - Load external projects data in 393 millis (read time: 391)
+2025-12-27 12:26:51,446 [   4295]   INFO - #git4idea.log.GitLogProvider - Fresh repository: file://D:/work_self/JumpToAntigravity/JumpToAntigravity
+2025-12-27 12:26:51,450 [   4299]   INFO - #git4idea.log.GitLogProvider - Fresh repository: file://D:/work_self/JumpToAntigravity/JumpToAntigravity
+2025-12-27 12:26:51,469 [   4318]   INFO - #git4idea.log.GitLogProvider - Fresh repository: file://D:/work_self/JumpToAntigravity/JumpToAntigravity
+2025-12-27 12:26:51,472 [   4321]   INFO - #git4idea.log.GitLogProvider - Fresh repository: file://D:/work_self/JumpToAntigravity/JumpToAntigravity
+2025-12-27 12:26:51,719 [   4568]   WARN - #git4idea.annotate.GitAnnotationProvider - bad revision 'HEAD'
+com.intellij.openapi.vcs.VcsException: bad revision 'HEAD'
+	at git4idea.commands.GitCommandResult.throwOnError(GitCommandResult.java:172)
+	at git4idea.commands.GitCommandResult.getOutputOrThrow(GitCommandResult.java:156)
+	at git4idea.history.GitHistoryUtils.getCurrentRevision(GitHistoryUtils.java:194)
+	at git4idea.annotate.GitAnnotationProvider.getLastRevision(GitAnnotationProvider.java:521)
+	at git4idea.annotate.GitAnnotationProvider.getPathAndRevision(GitAnnotationProvider.java:503)
+	at git4idea.annotate.GitAnnotationProvider.populateCache(GitAnnotationProvider.java:474)
+	at com.intellij.openapi.vcs.annotate.AnnotationsPreloader$schedulePreloading$1.doRun(AnnotationsPreloader.kt:63)
+	at com.intellij.openapi.progress.util.BackgroundTaskUtil.lambda$runUnderDisposeAwareIndicator$15(BackgroundTaskUtil.java:371)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$1(CoreProgressManager.java:223)
+	at com.intellij.platform.diagnostic.telemetry.helpers.TraceKt.use(trace.kt:45)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$2(CoreProgressManager.java:222)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$executeProcessUnderProgress$14(CoreProgressManager.java:674)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:749)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computeUnderProgress(CoreProgressManager.java:705)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:673)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:79)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:203)
+	at com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:366)
+	at com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:349)
+	at com.intellij.util.ui.update.DisposableUpdate.run(DisposableUpdate.java:19)
+	at com.intellij.util.ui.update.Update.execute$suspendImpl(Update.kt:61)
+	at com.intellij.util.ui.update.Update.execute(Update.kt)
+	at com.intellij.util.ui.update.MergingUpdateQueue.executeUpdates$suspendImpl(MergingUpdateQueue.kt:371)
+	at com.intellij.util.ui.update.MergingUpdateQueue.executeUpdates(MergingUpdateQueue.kt)
+	at com.intellij.util.ui.update.MergingUpdateQueue$restart$1.invokeSuspend(MergingUpdateQueue.kt:351)
+	at com.intellij.util.ui.update.MergingUpdateQueue$restart$1.invoke(MergingUpdateQueue.kt)
+	at com.intellij.util.ui.update.MergingUpdateQueue$restart$1.invoke(MergingUpdateQueue.kt)
+	at com.intellij.util.SingleAlarm$scheduleTask$1$1$1.invokeSuspend(SingleAlarm.kt:394)
+	at com.intellij.util.SingleAlarm$scheduleTask$1$1$1.invoke(SingleAlarm.kt)
+	at com.intellij.util.SingleAlarm$scheduleTask$1$1$1.invoke(SingleAlarm.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:62)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:155)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.util.SingleAlarm$scheduleTask$1$1.invokeSuspend(SingleAlarm.kt:392)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2025-12-27 12:26:52,632 [   5481]   INFO - #c.i.i.p.i.ProjectViewInitNotifier - Project View initialization completed
+2025-12-27 12:26:53,657 [   6506]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Loading global entities com.intellij.platform.workspace.jps.entities.SdkEntity from files
+2025-12-27 12:26:53,672 [   6521]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Loading global entities com.intellij.platform.workspace.jps.entities.LibraryEntity from files
+2025-12-27 12:26:53,678 [   6527]   INFO - #c.i.w.i.i.EntitiesOrphanageImpl - Update orphanage. 0 modules added
+2025-12-27 12:26:53,680 [   6529]   INFO - #c.i.w.i.i.WorkspaceModelImpl - Project model updated to version 8 in 3 ms: Sync global entities with project: JumpToAntigravity
+2025-12-27 12:26:53,680 [   6529]   INFO - #c.i.w.i.i.GlobalWorkspaceModel - Global model updated to version 3 in 6 ms: Sync global entities with state
+2025-12-27 12:26:54,868 [   7717]   INFO - #c.i.p.m.MavenProjectDependenciesModel - Start collecting all modules
+2025-12-27 12:26:54,870 [   7719]   INFO - #c.i.p.g.GradleProjectDependenciesModel - Start collecting all modules
+2025-12-27 12:26:54,878 [   7727]   INFO - #c.i.p.g.GradleProjectDependenciesModel - Finish collecting all modules, count of found modules: 2
+2025-12-27 12:26:54,878 [   7727]   INFO - #c.i.p.m.i.ProjectDependenciesModelImpl - Count of declared packages: null, imported packages: 0
+2025-12-27 12:26:54,879 [   7728]   INFO - #c.i.p.m.i.ProjectDependenciesModelImpl - Count of declared packages: null, imported packages: 3
+2025-12-27 12:26:54,977 [   7826]   INFO - #c.i.p.m.i.ProjectDependenciesModelImpl - Count of declared packages: null, imported packages: 3
+2025-12-27 12:26:55,150 [   7999]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - === AntigravityLauncher.open() called ===
+2025-12-27 12:26:55,150 [   7999]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - executablePath: ''
+2025-12-27 12:26:55,150 [   7999]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - toolCommand: 'qoder'
+2025-12-27 12:26:55,150 [   7999]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - toolDisplayName: 'Qoder'
+2025-12-27 12:26:55,150 [   7999]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - filePath: 'D:/work_self/JumpToAntigravity/JumpToAntigravity/src/main/java/com/peach/jumptoantigravity/services/AntigravityLauncher.java'
+2025-12-27 12:26:55,150 [   7999]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - finalCommand (after selection): 'qoder'
+2025-12-27 12:26:55,152 [   8001]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - Found project root: D:\work_self\JumpToAntigravity\JumpToAntigravity (marker: .git)
+2025-12-27 12:26:55,152 [   8001]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - Full command list: [cmd.exe, /c, qoder, -r, D:\work_self\JumpToAntigravity\JumpToAntigravity, -g, D:/work_self/JumpToAntigravity/JumpToAntigravity/src/main/java/com/peach/jumptoantigravity/services/AntigravityLauncher.java:175]
+2025-12-27 12:26:55,152 [   8001]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - Command as string: cmd.exe /c qoder -r D:\work_self\JumpToAntigravity\JumpToAntigravity -g D:/work_self/JumpToAntigravity/JumpToAntigravity/src/main/java/com/peach/jumptoantigravity/services/AntigravityLauncher.java:175
+2025-12-27 12:26:55,152 [   8001]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - PATH environment: null
+2025-12-27 12:26:55,205 [   8054]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - Process output for Qoder: 'qoder' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+2025-12-27 12:26:55,205 [   8054]   INFO - #com.peach.jumptoantigravity.services.AntigravityLauncher - Process exit code for Qoder: 1
+2025-12-27 12:26:55,205 [   8054]   WARN - #com.peach.jumptoantigravity.services.AntigravityLauncher - Non-zero exit code! Command may have failed.
+2025-12-27 12:26:55,733 [   8582]   INFO - #o.j.j.b.i.CompilerReferenceIndex - backward reference index version doesn't exist
+2025-12-27 12:26:55,736 [   8585]   INFO - #c.i.c.b.IsUpToDateCheckStartupActivity - suitable consumer is not found
+2025-12-27 12:26:55,817 [   8666]   INFO - #c.i.d.WindowsDefenderCheckerActivity - real-time protection: false
+2025-12-27 12:26:55,861 [   8710]   INFO - #c.i.w.i.i.GlobalWorkspaceModel - Sync global entities with mutable entity storage
+2025-12-27 12:26:55,864 [   8713]   INFO - #c.i.w.i.i.j.s.JpsProjectModelSynchronizer - Attempt 1: Apply JPS storage (iml files)
+2025-12-27 12:26:55,887 [   8736]   INFO - #c.i.p.m.ProjectDependenciesModuleAggregator - Supported models after update: [IntellijProjectDependenciesModel, GradleProjectDependenciesModel]
+2025-12-27 12:26:55,903 [   8752]   INFO - #c.i.w.i.i.EntitiesOrphanageImpl - Update orphanage. 0 modules added
+2025-12-27 12:26:55,905 [   8754]   INFO - #c.i.w.i.i.j.s.JpsProjectModelSynchronizer - Attempt 1: Changes were successfully applied
+2025-12-27 12:26:55,909 [   8758]   INFO - #c.i.w.i.i.j.s.DelayedProjectSynchronizer$Util - Workspace model loaded from cache. Syncing real project state into workspace model in 186 ms. Thread[#27,DefaultDispatcher-worker-8 @run activity#8942,5,main]
+2025-12-27 12:26:55,917 [   8766]   INFO - #c.i.p.m.i.ProjectDependenciesModelImpl - Count of declared packages: 0, imported packages: 3
+2025-12-27 12:26:58,416 [  11265]   INFO - #c.i.c.CompilerWorkspaceConfiguration - Available processors: 12
+2025-12-27 12:27:08,465 [  21314]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Saving global entities com.intellij.platform.workspace.jps.entities.SdkEntity to files
+2025-12-27 12:27:08,479 [  21328]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Saving global entities com.intellij.platform.workspace.jps.entities.LibraryEntity to files

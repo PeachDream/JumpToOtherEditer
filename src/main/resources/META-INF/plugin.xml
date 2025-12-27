@@ -1,0 +1,84 @@
+<!-- Plugin Configuration File: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN, cannot be changed between the plugin versions. -->
+    <id>com.peach.JumpToOtherEditer</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
+    <name>Jump to Other Editer</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor url="https://github.com/peach">Peach</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
+    <description><![CDATA[
+        <h2>Jump to External AI Editors</h2>
+        <p>Quickly open any file from your JetBrains IDE in external AI-powered editors like Antigravity, Cursor, VS Code, Qoder, Trae, and CodeBuddy.</p>
+        
+        <h3>Supported IDEs:</h3>
+        <p>Works on <strong>all JetBrains IDEs</strong>: IntelliJ IDEA, PyCharm, WebStorm, GoLand, CLion, Rider, PhpStorm, RubyMine, DataGrip, Android Studio, and more!</p>
+        
+        <h3>Supported Editors:</h3>
+        <ul>
+            <li>Antigravity</li>
+            <li>Cursor</li>
+            <li>VS Code</li>
+            <li>Qoder</li>
+            <li>Trae</li>
+            <li>CodeBuddy</li>
+        </ul>
+        
+        <h3>Features:</h3>
+        <ul>
+            <li>Open files directly from the editor context menu</li>
+            <li>Open files from the Project View context menu</li>
+            <li>Open files from the Editor Tab context menu</li>
+            <li>Preserves the current line position</li>
+            <li>Configure which editors to show in the menu</li>
+            <li>Custom executable path support</li>
+        </ul>
+        
+        <h3>Usage:</h3>
+        <ul>
+            <li>Right-click on any file in the editor or project view</li>
+            <li>Select "Jump to External Editor" → Choose your editor</li>
+        </ul>
+        
+        <h3>Requirements:</h3>
+        <p>The target editor must be installed. For best results, ensure the editor is available in your system PATH, or configure the executable path in Settings → Tools → JumpToOtherEditer.</p>
+    ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extensions defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.peach.JumpToOtherEditer.settings.AppSettingsState"/>
+        <applicationConfigurable parentId="tools" instance="com.peach.JumpToOtherEditer.settings.AppSettingsConfigurable"
+                                 id="com.peach.JumpToOtherEditer.settings.AppSettingsConfigurable"
+                                 displayName="JumpToOtherEditer"/>
+
+        <!-- Notification Group for displaying messages to users -->
+        <notificationGroup id="JumpToOtherEditer" 
+                          displayType="BALLOON" 
+                          toolWindowId="JumpToOtherEditer"/>
+    </extensions>
+
+    <!-- Actions -->
+    <actions>
+        <!-- Action group for context menu -->
+        <group id="JumpToOtherEditer.Group"
+               class="com.peach.JumpToOtherEditer.actions.JumpToToolsGroup"
+               text="Jump to External Editor"
+               popup="true"
+               icon="AllIcons.Actions.SplitVertically">
+            
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <add-to-group group-id="EditorTabPopupMenu" anchor="last"/>
+        </group>
+    </actions>
+</idea-plugin>
