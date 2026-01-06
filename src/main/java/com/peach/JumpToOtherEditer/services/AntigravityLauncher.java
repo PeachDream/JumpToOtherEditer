@@ -18,15 +18,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Service responsible for launching external editors.
- * All supported editors are VS Code based and share the same CLI syntax:
- * <code>command -r -g &lt;filepath&gt;:&lt;line&gt;</code>
+ * 负责启动外部编辑器的服务类。
+ * 所有支持的编辑器都基于 VS Code，使用相同的命令行语法：
+ * <code>command -g &lt;filepath&gt;:&lt;line&gt;</code>
  */
 public class AntigravityLauncher {
     private static final Logger logger = Logger.getInstance(AntigravityLauncher.class);
     private static final String NOTIFICATION_GROUP_ID = "JumpToOtherEditer";
 
-    // Common installation paths for VS Code based editors on Windows
+    // Windows 系统下 VS Code 系列编辑器的常见安装路径
     private static final Map<String, String[]> WINDOWS_DEFAULT_PATHS = new HashMap<>();
 
     static {
@@ -71,13 +71,13 @@ public class AntigravityLauncher {
                 localAppData + "\\Programs\\Trae\\Trae.exe"
         });
 
-        // Trae CN (中国版)
+        // Trae CN（中国版）
         WINDOWS_DEFAULT_PATHS.put("trae-cn", new String[] {
                 localAppData + "\\Programs\\Trae CN\\bin\\trae-cn.cmd",
                 localAppData + "\\Programs\\Trae CN\\Trae CN.exe"
         });
 
-        // CodeBuddy (Tencent)
+        // CodeBuddy（腾讯）
         WINDOWS_DEFAULT_PATHS.put("buddy", new String[] {
                 localAppData + "\\Programs\\CodeBuddy\\bin\\buddy.cmd",
                 localAppData + "\\Programs\\CodeBuddy\\CodeBuddy.exe"
@@ -91,33 +91,32 @@ public class AntigravityLauncher {
     }
 
     /**
-     * Opens a file in the specified external editor.
+     * 在指定的外部编辑器中打开文件。
      *
-     * @param executablePath  The configured absolute path to the executable
-     *                        (optional)
-     * @param toolCommand     The default command name (e.g., "code", "cursor") if
-     *                        path is not configured
-     * @param toolDisplayName The display name of the editor for notifications
-     * @param filePath        The absolute path to the file
-     * @param lineNumber      The line number to navigate to (1-indexed, optional)
-     * @param columnNumber    The column number to navigate to (1-indexed, optional)
-     * @param reuseWindow     Whether to reuse an existing window
+     * @param executablePath  可执行文件的绝对路径（可选）
+     * @param toolCommand     默认命令名称（如 "code", "cursor"），当未配置路径时使用
+     * @param toolDisplayName 编辑器的显示名称，用于通知
+     * @param filePath        文件的绝对路径
+     * @param lineNumber      要跳转到的行号（1索引，可选）
+     * @param columnNumber    要跳转到的列号（1索引，可选）
+     * @param reuseWindow     （已弃用/忽略）现在由 VS Code 自动判断：
+     *                        如果文件在当前工作区则复用窗口，否则打开新窗口
      */
     public static void open(String executablePath, String toolCommand, String toolDisplayName,
             String filePath, @Nullable Integer lineNumber, @Nullable Integer columnNumber,
             boolean reuseWindow) {
 
-        logger.info("=== AntigravityLauncher.open() ===");
-        logger.info("Editor: " + toolDisplayName);
-        logger.info("Command: " + toolCommand);
-        logger.info("Path: " + (executablePath != null ? executablePath : "(auto-detect)"));
-        logger.info("File: " + filePath);
+        logger.info("=== AntigravityLauncher.open() 开始 ===");
+        logger.info("编辑器: " + toolDisplayName);
+        logger.info("命令: " + toolCommand);
+        logger.info("路径: " + (executablePath != null ? executablePath : "（自动检测）"));
+        logger.info("文件: " + filePath);
 
         String finalCommand = determineExecutable(executablePath, toolCommand);
-        logger.info("Resolved executable: " + finalCommand);
+        logger.info("解析后的可执行文件: " + finalCommand);
 
         List<String> command = buildCommand(finalCommand, filePath, lineNumber, columnNumber, reuseWindow);
-        logger.info("Full command: " + String.join(" ", command));
+        logger.info("完整命令: " + String.join(" ", command));
 
         try {
             ProcessBuilder processBuilder = new ProcessBuilder(command);
@@ -125,7 +124,7 @@ public class AntigravityLauncher {
 
             Process process = processBuilder.start();
 
-            // Read process output in background
+            // 在后台线程中读取进程输出
             new Thread(() -> {
                 try {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -136,57 +135,57 @@ public class AntigravityLauncher {
                     }
                     int exitCode = process.waitFor();
                     if (exitCode != 0) {
-                        logger.warn(toolDisplayName + " exited with code " + exitCode + ": " + output);
+                        logger.warn(toolDisplayName + " 退出码: " + exitCode + "，输出: " + output);
                     }
                 } catch (Exception e) {
-                    logger.error("Error reading process output", e);
+                    logger.error("读取进程输出时出错", e);
                 }
             }).start();
 
             String fileName = Paths.get(filePath).getFileName().toString();
             showNotification(
-                    "Opened in " + toolDisplayName,
-                    "File: " + fileName,
+                    "已在 " + toolDisplayName + " 中打开",
+                    "文件: " + fileName,
                     NotificationType.INFORMATION);
 
         } catch (IOException e) {
-            String errorMessage = "Failed to launch " + toolDisplayName + ": " + e.getMessage();
+            String errorMessage = "启动 " + toolDisplayName + " 失败: " + e.getMessage();
             logger.error(errorMessage, e);
 
             showNotification(
-                    "Failed to open " + toolDisplayName,
-                    "Error: " + e.getMessage() + "\n\nPlease check if " + toolDisplayName +
-                            " is installed and the command '" + toolCommand + "' is in PATH, " +
-                            "or configure the executable path in Settings → Tools → JumpToOtherEditer.",
+                    "打开 " + toolDisplayName + " 失败",
+                    "错误: " + e.getMessage() + "\n\n请检查 " + toolDisplayName +
+                            " 是否已安装，命令 '" + toolCommand + "' 是否在 PATH 中，" +
+                            "或在 设置 → 工具 → JumpToOtherEditer 中配置可执行文件路径。",
                     NotificationType.ERROR);
         }
     }
 
     /**
-     * Determine the executable to use.
-     * Priority: configured path > auto-detected path > command name
+     * 确定要使用的可执行文件。
+     * 优先级：配置的路径 > 自动检测的路径 > 命令名称
      */
     private static String determineExecutable(String configuredPath, String command) {
-        // If a path is configured, use it
+        // 如果配置了路径，使用它
         if (configuredPath != null && !configuredPath.trim().isEmpty()) {
             return configuredPath.trim();
         }
 
-        // Try to find in default Windows paths
+        // 尝试在 Windows 默认路径中查找
         if (isWindows()) {
             String[] defaultPaths = WINDOWS_DEFAULT_PATHS.get(command.toLowerCase());
             if (defaultPaths != null) {
                 for (String path : defaultPaths) {
                     File file = new File(path);
                     if (file.exists() && file.canExecute()) {
-                        logger.info("Found " + command + " at: " + path);
+                        logger.info("找到 " + command + " 位于: " + path);
                         return path;
                     }
                 }
             }
         }
 
-        // Fallback to command name (will use PATH)
+        // 回退到命令名称（使用 PATH 环境变量）
         return command;
     }
 
@@ -194,7 +193,7 @@ public class AntigravityLauncher {
             @Nullable Integer lineNumber, @Nullable Integer columnNumber, boolean reuseWindow) {
         List<String> command = new ArrayList<>();
 
-        // On Windows, use cmd.exe for proper PATH handling
+        // 在 Windows 上使用 cmd.exe 以正确处理 PATH
         if (isWindows()) {
             command.add("cmd.exe");
             command.add("/c");
@@ -202,18 +201,18 @@ public class AntigravityLauncher {
 
         command.add(executable);
 
-        // -r flag to reuse existing window
-        if (reuseWindow) {
-            command.add("-r");
-        }
+        // 注意：这里不使用 -r 参数，让 VS Code 自动智能判断：
+        // - 如果文件在已打开的工作区中，则复用该窗口
+        // - 如果文件不在任何已打开的工作区中，则打开新窗口
+        // 这为多项目工作流提供了最佳的用户体验
 
-        // Find project root for folder tree view
+        // 查找项目根目录以显示文件夹树
         String projectRoot = findProjectRoot(filePath);
         if (projectRoot != null) {
             command.add(projectRoot);
         }
 
-        // -g flag with file:line:column format
+        // 使用 -g 参数指定 文件:行:列 格式
         command.add("-g");
 
         StringBuilder location = new StringBuilder(filePath);
@@ -229,7 +228,7 @@ public class AntigravityLauncher {
     }
 
     /**
-     * Find the project root directory by looking for common project markers.
+     * 通过查找常见的项目标记文件来查找项目根目录。
      */
     @Nullable
     private static String findProjectRoot(String filePath) {
@@ -248,14 +247,14 @@ public class AntigravityLauncher {
             for (String marker : projectMarkers) {
                 File markerFile = new File(directory, marker);
                 if (markerFile.exists()) {
-                    logger.info("Found project root: " + directory.getAbsolutePath());
+                    logger.info("找到项目根目录: " + directory.getAbsolutePath());
                     return directory.getAbsolutePath();
                 }
             }
             directory = directory.getParentFile();
         }
 
-        // Fallback to parent directory
+        // 回退到父目录
         File parentDir = new File(filePath).getParentFile();
         return parentDir != null ? parentDir.getAbsolutePath() : null;
     }
@@ -274,7 +273,7 @@ public class AntigravityLauncher {
                     .createNotification(title, content, type)
                     .notify(project);
         } catch (Exception e) {
-            logger.debug("Could not show notification: " + e.getMessage());
+            logger.debug("无法显示通知: " + e.getMessage());
         }
     }
 }

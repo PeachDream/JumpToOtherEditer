@@ -13,34 +13,38 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 设置状态持久化服务。
+ * 管理编辑器配置的保存和加载。
+ */
 @State(name = "com.peach.jumptoantigravity.settings.AppSettingsState", storages = @Storage("JumpToOtherEditerSettings.xml"))
 public class AppSettingsState implements PersistentStateComponent<AppSettingsState> {
 
     /**
-     * List of editor configurations (dynamic)
+     * 编辑器配置列表（动态）
      */
     @XCollection(propertyElementName = "editors", elementTypes = EditorConfig.class)
     public List<EditorConfig> editors = new ArrayList<>();
 
     /**
-     * Flag to track if default editors have been initialized
+     * 标记默认编辑器是否已初始化
      */
     public boolean defaultsInitialized = false;
 
     public AppSettingsState() {
-        // Initialize with default editors on first use
+        // 首次使用时初始化默认编辑器
         initializeDefaultEditors();
     }
 
     /**
-     * Initialize default built-in editors
+     * 初始化默认的内置编辑器
      */
     private void initializeDefaultEditors() {
         if (defaultsInitialized || !editors.isEmpty()) {
             return;
         }
 
-        // Add built-in editors (VS Code and popular forks)
+        // 添加内置编辑器（VS Code 及其常见分支）
         editors.add(new EditorConfig("VS Code", "code", true));
         editors.add(new EditorConfig("Cursor", "cursor", true));
         editors.add(new EditorConfig("Antigravity", "antigravity", true));
@@ -54,7 +58,7 @@ public class AppSettingsState implements PersistentStateComponent<AppSettingsSta
 
     public static AppSettingsState getInstance() {
         AppSettingsState state = ApplicationManager.getApplication().getService(AppSettingsState.class);
-        // Ensure defaults are initialized even for existing installations
+        // 确保即使对于已有安装也初始化默认值
         if (!state.defaultsInitialized && state.editors.isEmpty()) {
             state.initializeDefaultEditors();
         }
@@ -62,7 +66,7 @@ public class AppSettingsState implements PersistentStateComponent<AppSettingsSta
     }
 
     /**
-     * Get list of enabled editors
+     * 获取已启用的编辑器列表
      */
     public List<EditorConfig> getEnabledEditors() {
         List<EditorConfig> enabled = new ArrayList<>();
@@ -75,7 +79,7 @@ public class AppSettingsState implements PersistentStateComponent<AppSettingsSta
     }
 
     /**
-     * Add a new custom editor
+     * 添加新的自定义编辑器
      */
     public EditorConfig addEditor(String name, String command) {
         EditorConfig editor = new EditorConfig(name, command, false);
@@ -84,14 +88,14 @@ public class AppSettingsState implements PersistentStateComponent<AppSettingsSta
     }
 
     /**
-     * Remove an editor by ID (only non-builtin editors can be removed)
+     * 通过 ID 删除编辑器（只能删除非内置编辑器）
      */
     public boolean removeEditor(String id) {
         return editors.removeIf(e -> e.id.equals(id) && !e.builtin);
     }
 
     /**
-     * Find an editor by ID
+     * 通过 ID 查找编辑器
      */
     @Nullable
     public EditorConfig findEditorById(String id) {
@@ -104,7 +108,7 @@ public class AppSettingsState implements PersistentStateComponent<AppSettingsSta
     }
 
     /**
-     * Deep copy the editors list
+     * 深拷贝编辑器列表
      */
     public List<EditorConfig> copyEditors() {
         List<EditorConfig> copy = new ArrayList<>();
@@ -115,7 +119,7 @@ public class AppSettingsState implements PersistentStateComponent<AppSettingsSta
     }
 
     /**
-     * Replace editors list with a copy
+     * 用拷贝替换编辑器列表
      */
     public void setEditors(List<EditorConfig> newEditors) {
         editors.clear();
@@ -133,7 +137,7 @@ public class AppSettingsState implements PersistentStateComponent<AppSettingsSta
     @Override
     public void loadState(@NotNull AppSettingsState state) {
         XmlSerializerUtil.copyBean(state, this);
-        // Ensure defaults exist after loading
+        // 加载后确保默认值存在
         if (!defaultsInitialized && editors.isEmpty()) {
             initializeDefaultEditors();
         }

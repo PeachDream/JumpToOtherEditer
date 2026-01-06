@@ -13,9 +13,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 /**
- * Dynamic action group that shows enabled editors in the context menu.
- * Editors are dynamically loaded from settings, allowing users to add custom
- * editors.
+ * 动态 Action 组，在右键菜单中显示已启用的编辑器。
+ * 编辑器从设置中动态加载，允许用户添加自定义编辑器。
  */
 public class JumpToToolsGroup extends ActionGroup implements DumbAware {
 
@@ -35,7 +34,7 @@ public class JumpToToolsGroup extends ActionGroup implements DumbAware {
 
     @Override
     public void update(@NotNull AnActionEvent e) {
-        // Show the group only if there are enabled editors
+        // 只有当存在已启用的编辑器时才显示该组
         AppSettingsState settings = AppSettingsState.getInstance();
         List<EditorConfig> enabledEditors = settings.getEnabledEditors();
         e.getPresentation().setEnabledAndVisible(!enabledEditors.isEmpty());
@@ -47,14 +46,14 @@ public class JumpToToolsGroup extends ActionGroup implements DumbAware {
     }
 
     /**
-     * Action to open a file in a specific editor.
-     * This action is dynamically created based on EditorConfig.
+     * 在指定编辑器中打开文件的 Action。
+     * 此 Action 根据 EditorConfig 动态创建。
      */
     private static class OpenInEditorAction extends AnAction implements DumbAware {
         private final EditorConfig editorConfig;
 
         public OpenInEditorAction(EditorConfig editorConfig) {
-            super("Open in " + editorConfig.name);
+            super("在 " + editorConfig.name + " 中打开");
             this.editorConfig = editorConfig;
         }
 
@@ -69,7 +68,7 @@ public class JumpToToolsGroup extends ActionGroup implements DumbAware {
             Editor editor = e.getData(CommonDataKeys.EDITOR);
             Integer lineNumber = null;
             if (editor != null) {
-                // logicalPosition is 0-indexed, so we add 1
+                // logicalPosition 是 0 索引的，所以需要加 1
                 lineNumber = editor.getCaretModel().getLogicalPosition().line + 1;
             }
 
@@ -85,7 +84,7 @@ public class JumpToToolsGroup extends ActionGroup implements DumbAware {
 
         @Override
         public void update(@NotNull AnActionEvent e) {
-            // Always enable, let the action handle missing file gracefully
+            // 始终启用，让 action 优雅地处理文件缺失的情况
             e.getPresentation().setEnabledAndVisible(true);
         }
 

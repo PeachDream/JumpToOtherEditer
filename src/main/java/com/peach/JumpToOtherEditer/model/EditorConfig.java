@@ -7,8 +7,8 @@ import java.util.Objects;
 import java.util.UUID;
 
 /**
- * Represents configuration for a single external editor.
- * All these editors are VS Code based, so they share the same CLI syntax.
+ * 表示单个外部编辑器的配置。
+ * 所有这些编辑器都基于 VS Code，因此它们共享相同的命令行语法。
  */
 @Tag("editor")
 public class EditorConfig {
@@ -29,10 +29,10 @@ public class EditorConfig {
     public boolean enabled;
 
     @Attribute("builtin")
-    public boolean builtin; // Built-in editors cannot be deleted, only disabled
+    public boolean builtin; // 内置编辑器无法删除，只能禁用
 
     /**
-     * Default constructor required for XML serialization
+     * XML 序列化需要的默认构造函数
      */
     public EditorConfig() {
         this.id = UUID.randomUUID().toString();
@@ -44,11 +44,11 @@ public class EditorConfig {
     }
 
     /**
-     * Create a new editor configuration
+     * 创建新的编辑器配置
      * 
-     * @param name    Display name of the editor
-     * @param command CLI command (e.g., "code", "cursor")
-     * @param builtin Whether this is a built-in editor
+     * @param name    编辑器的显示名称
+     * @param command 命令行命令（如 "code", "cursor"）
+     * @param builtin 是否为内置编辑器
      */
     public EditorConfig(String name, String command, boolean builtin) {
         this.id = UUID.randomUUID().toString();
@@ -60,7 +60,7 @@ public class EditorConfig {
     }
 
     /**
-     * Create a new editor configuration with all fields
+     * 使用所有字段创建新的编辑器配置
      */
     public EditorConfig(String id, String name, String command, String path, boolean enabled, boolean builtin) {
         this.id = id;
@@ -72,7 +72,7 @@ public class EditorConfig {
     }
 
     /**
-     * Create a deep copy of this configuration
+     * 创建此配置的深拷贝
      */
     public EditorConfig copy() {
         return new EditorConfig(this.id, this.name, this.command, this.path, this.enabled, this.builtin);

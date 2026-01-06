@@ -7,6 +7,10 @@ import org.jetbrains.annotations.Nullable;
 import javax.swing.*;
 import java.util.List;
 
+/**
+ * 设置页面配置器。
+ * 处理设置页面的创建、修改检测、应用和重置操作。
+ */
 public class AppSettingsConfigurable implements Configurable {
 
     private AppSettingsComponent mySettingsComponent;
@@ -32,7 +36,7 @@ public class AppSettingsConfigurable implements Configurable {
         List<EditorConfig> currentEditors = mySettingsComponent.getEditors();
         List<EditorConfig> savedEditors = settings.editors;
 
-        // Check if lists are different
+        // 检查列表是否有差异
         if (currentEditors.size() != savedEditors.size()) {
             return true;
         }
