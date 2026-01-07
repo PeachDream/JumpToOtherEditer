@@ -3,6 +3,7 @@ package com.peach.JumpToOtherEditer.actions;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.DumbAware;
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.peach.JumpToOtherEditer.model.EditorConfig;
 import com.peach.JumpToOtherEditer.services.AntigravityLauncher;
@@ -65,6 +66,13 @@ public class JumpToToolsGroup extends ActionGroup implements DumbAware {
 
             String filePath = virtualFile.getPath();
 
+            // 获取当前 IDEA 项目的根目录
+            Project project = e.getProject();
+            String projectRoot = null;
+            if (project != null) {
+                projectRoot = project.getBasePath();
+            }
+
             Editor editor = e.getData(CommonDataKeys.EDITOR);
             Integer lineNumber = null;
             if (editor != null) {
@@ -79,7 +87,7 @@ public class JumpToToolsGroup extends ActionGroup implements DumbAware {
                     filePath,
                     lineNumber,
                     null,
-                    true);
+                    projectRoot);
         }
 
         @Override

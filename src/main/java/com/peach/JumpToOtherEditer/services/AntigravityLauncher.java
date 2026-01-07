@@ -99,23 +99,25 @@ public class AntigravityLauncher {
      * @param filePath        文件的绝对路径
      * @param lineNumber      要跳转到的行号（1索引，可选）
      * @param columnNumber    要跳转到的列号（1索引，可选）
-     * @param reuseWindow     （已弃用/忽略）现在由 VS Code 自动判断：
-     *                        如果文件在当前工作区则复用窗口，否则打开新窗口
+     * @param projectRoot     项目根目录路径（从 IDEA 获取，可选），用于在外部编辑器中打开相同的项目目录
+     * @author peach
+     * @since 2026/01/07 | V1.0.0
      */
     public static void open(String executablePath, String toolCommand, String toolDisplayName,
             String filePath, @Nullable Integer lineNumber, @Nullable Integer columnNumber,
-            boolean reuseWindow) {
+            @Nullable String projectRoot) {
 
         logger.info("=== AntigravityLauncher.open() 开始 ===");
         logger.info("编辑器: " + toolDisplayName);
         logger.info("命令: " + toolCommand);
         logger.info("路径: " + (executablePath != null ? executablePath : "（自动检测）"));
         logger.info("文件: " + filePath);
+        logger.info("项目根目录: " + (projectRoot != null ? projectRoot : "（未提供）"));
 
         String finalCommand = determineExecutable(executablePath, toolCommand);
         logger.info("解析后的可执行文件: " + finalCommand);
 
-        List<String> command = buildCommand(finalCommand, filePath, lineNumber, columnNumber, reuseWindow);
+        List<String> command = buildCommand(finalCommand, filePath, lineNumber, columnNumber, projectRoot);
         logger.info("完整命令: " + String.join(" ", command));
 
         try {
@@ -189,8 +191,20 @@ public class AntigravityLauncher {
         return command;
     }
 
+    /**
+     * 构建打开外部编辑器的命令行
+     *
+     * @param executable   可执行文件路径
+     * @param filePath     文件路径
+     * @param lineNumber   行号
+     * @param columnNumber 列号
+     * @param projectRoot  项目根目录（从 IDEA 获取）
+     * @return 命令行参数列表
+     * @author peach
+     * @since 2026/01/07 | V1.0.0
+     */
     private static List<String> buildCommand(String executable, String filePath,
-            @Nullable Integer lineNumber, @Nullable Integer columnNumber, boolean reuseWindow) {
+            @Nullable Integer lineNumber, @Nullable Integer columnNumber, @Nullable String projectRoot) {
         List<String> command = new ArrayList<>();
 
         // 在 Windows 上使用 cmd.exe 以正确处理 PATH
@@ -201,15 +215,19 @@ public class AntigravityLauncher {
 
         command.add(executable);
 
-        // 注意：这里不使用 -r 参数，让 VS Code 自动智能判断：
-        // - 如果文件在已打开的工作区中，则复用该窗口
-        // - 如果文件不在任何已打开的工作区中，则打开新窗口
-        // 这为多项目工作流提供了最佳的用户体验
+        // 使用从 IDEA 获取的项目根目录，如果没有则回退到自动查找
+        String effectiveProjectRoot = projectRoot;
+        if (effectiveProjectRoot == null || effectiveProjectRoot.isEmpty()) {
+            // 如果没有从 IDEA 获取到项目根目录，则使用自动查找
+            effectiveProjectRoot = findProjectRoot(filePath);
+            logger.info("【调试】buildCommand - IDEA未提供项目根目录，自动查找结果: " + effectiveProjectRoot);
+        } else {
+            logger.info("【调试】buildCommand - 使用IDEA提供的项目根目录: " + effectiveProjectRoot);
+        }
 
-        // 查找项目根目录以显示文件夹树
-        String projectRoot = findProjectRoot(filePath);
-        if (projectRoot != null) {
-            command.add(projectRoot);
+        if (effectiveProjectRoot != null && !effectiveProjectRoot.isEmpty()) {
+            command.add(effectiveProjectRoot);
+            logger.info("【调试】buildCommand - 已添加项目根目录到命令: " + effectiveProjectRoot);
         }
 
         // 使用 -g 参数指定 文件:行:列 格式
@@ -229,34 +247,161 @@ public class AntigravityLauncher {
 
     /**
      * 通过查找常见的项目标记文件来查找项目根目录。
+     * 优先级：
+     * 1. 以 .git 目录为边界，找到 .git 就是项目根目录
+     * 2. 对于 Maven/Gradle 多模块项目，会向上查找到最顶层的父项目
+     * 3. 如果没有 .git，则使用第一个找到的项目标记
+     *
+     * @param filePath 文件路径
+     * @return 项目根目录路径
+     * @author peach
+     * @since 2026/01/07 | V1.0.0
      */
     @Nullable
     private static String findProjectRoot(String filePath) {
         File file = new File(filePath);
         File directory = file.isDirectory() ? file : file.getParentFile();
 
+        logger.info("【调试】findProjectRoot - 开始查找，输入文件: " + filePath);
+        logger.info("【调试】findProjectRoot - 起始目录: " + (directory != null ? directory.getAbsolutePath() : "null"));
+
+        // 用于记录找到的第一个项目标记目录（作为退化方案）
+        File firstProjectRoot = null;
+
+        // 项目标记文件（不包括 .git，.git 单独处理）
         String[] projectMarkers = {
-                ".git", ".idea", ".vscode",
+                ".idea", ".vscode",
                 "pom.xml", "build.gradle", "build.gradle.kts",
                 "package.json", "Cargo.toml", "go.mod",
                 "requirements.txt", "pyproject.toml",
                 ".project", "CMakeLists.txt", "Makefile"
         };
 
+        int iteration = 0;
         while (directory != null) {
-            for (String marker : projectMarkers) {
-                File markerFile = new File(directory, marker);
-                if (markerFile.exists()) {
-                    logger.info("找到项目根目录: " + directory.getAbsolutePath());
-                    return directory.getAbsolutePath();
+            iteration++;
+            logger.info("【调试】findProjectRoot - 第 " + iteration + " 次迭代，当前目录: " + directory.getAbsolutePath());
+
+            // 优先检查 .git 目录 - 这是最可靠的项目边界
+            File gitDir = new File(directory, ".git");
+            logger.info("【调试】findProjectRoot - 检查 .git 是否存在: " + gitDir.getAbsolutePath() + " -> " + gitDir.exists());
+            if (gitDir.exists()) {
+                logger.info("【调试】找到 .git 目录，确定项目根目录: " + directory.getAbsolutePath());
+                return directory.getAbsolutePath();
+            }
+
+            // 检查其他项目标记
+            if (firstProjectRoot == null) {
+                for (String marker : projectMarkers) {
+                    File markerFile = new File(directory, marker);
+                    if (markerFile.exists()) {
+                        firstProjectRoot = directory;
+                        logger.info("【调试】findProjectRoot - 找到项目标记 " + marker + " 于: " + directory.getAbsolutePath());
+                        break;
+                    }
                 }
             }
+
+            // 检查是否是 Maven 多模块的子模块，如果是，继续向上查找父项目
+            if (firstProjectRoot != null && isSubmoduleOfParent(directory)) {
+                logger.info("【调试】findProjectRoot - " + directory.getAbsolutePath() + " 是父项目的子模块，继续向上查找");
+            }
+
             directory = directory.getParentFile();
+        }
+
+        // 如果没有找到 .git，使用第一个找到的项目标记目录
+        if (firstProjectRoot != null) {
+            logger.info("【调试】findProjectRoot - 未找到 .git，使用第一个项目标记目录: " + firstProjectRoot.getAbsolutePath());
+            return firstProjectRoot.getAbsolutePath();
         }
 
         // 回退到父目录
         File parentDir = new File(filePath).getParentFile();
+        logger.info("【调试】findProjectRoot - 未找到任何项目标记，回退到父目录: "
+                + (parentDir != null ? parentDir.getAbsolutePath() : "null"));
         return parentDir != null ? parentDir.getAbsolutePath() : null;
+    }
+
+    /**
+     * 检查当前目录是否是父目录的 Maven/Gradle 子模块
+     *
+     * @param directory 当前目录
+     * @return 如果是子模块返回 true
+     * @author peach
+     * @since 2026/01/07 | V1.0.0
+     */
+    private static boolean isSubmoduleOfParent(File directory) {
+        File parentDir = directory.getParentFile();
+        if (parentDir == null) {
+            return false;
+        }
+
+        // 检查 Maven 多模块项目
+        File parentPom = new File(parentDir, "pom.xml");
+        if (parentPom.exists()) {
+            if (checkMavenModule(parentPom, directory.getName())) {
+                return true;
+            }
+        }
+
+        // 检查 Gradle 多模块项目
+        File settingsGradle = new File(parentDir, "settings.gradle");
+        File settingsGradleKts = new File(parentDir, "settings.gradle.kts");
+        if (settingsGradle.exists() && checkGradleModule(settingsGradle, directory.getName())) {
+            return true;
+        }
+        if (settingsGradleKts.exists() && checkGradleModule(settingsGradleKts, directory.getName())) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * 检查 Maven pom.xml 中是否声明了指定的子模块
+     *
+     * @param pomFile    pom.xml 文件
+     * @param moduleName 模块名称
+     * @return 如果声明了该模块返回 true
+     * @author peach
+     * @since 2026/01/07 | V1.0.0
+     */
+    private static boolean checkMavenModule(File pomFile, String moduleName) {
+        try {
+            String content = new String(java.nio.file.Files.readAllBytes(pomFile.toPath()),
+                    java.nio.charset.StandardCharsets.UTF_8);
+            // 检查 <module>moduleName</module> 或 <module>./moduleName</module>
+            return content.contains("<module>" + moduleName + "</module>") ||
+                    content.contains("<module>./" + moduleName + "</module>");
+        } catch (IOException e) {
+            logger.warn("读取 pom.xml 失败: " + e.getMessage());
+            return false;
+        }
+    }
+
+    /**
+     * 检查 Gradle settings.gradle 中是否声明了指定的子模块
+     *
+     * @param settingsFile settings.gradle 文件
+     * @param moduleName   模块名称
+     * @return 如果声明了该模块返回 true
+     * @author peach
+     * @since 2026/01/07 | V1.0.0
+     */
+    private static boolean checkGradleModule(File settingsFile, String moduleName) {
+        try {
+            String content = new String(java.nio.file.Files.readAllBytes(settingsFile.toPath()),
+                    java.nio.charset.StandardCharsets.UTF_8);
+            // 检查 include 'moduleName' 或 include ':moduleName' 或 include("moduleName") 等
+            return content.contains("'" + moduleName + "'") ||
+                    content.contains("\"" + moduleName + "\"") ||
+                    content.contains("':" + moduleName + "'") ||
+                    content.contains("\":" + moduleName + "\"");
+        } catch (IOException e) {
+            logger.warn("读取 settings.gradle 失败: " + e.getMessage());
+            return false;
+        }
     }
 
     private static boolean isWindows() {
